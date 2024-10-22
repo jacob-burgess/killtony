@@ -1,0 +1,27 @@
+{
+  "name": "@killtony/core",
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "db": "sst shell drizzle-kit",
+    "db:pull": "sst shell drizzle-kit introspect",
+    "db:push": "sst shell drizzle-kit push"
+  },
+  "dependencies": {
+    "@planetscale/database": "1.19.0",
+    "@tsconfig/node20": "20.1.4",
+    "drizzle-kit": "0.26.2",
+    "drizzle-orm": "0.35.3",
+    "drizzle-zod": "^0.5.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sst": "^3.2.46"
+  }
+}
