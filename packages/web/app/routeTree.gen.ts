@@ -20,26 +20,31 @@ import { Route as EpisodesYoutubeIdImport } from './routes/episodes/$youtubeId'
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
+  id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const StreamingIndexRoute = StreamingIndexImport.update({
+  id: '/streaming/',
   path: '/streaming/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const SearchIndexRoute = SearchIndexImport.update({
+  id: '/search/',
   path: '/search/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const EpisodesIndexRoute = EpisodesIndexImport.update({
+  id: '/episodes/',
   path: '/episodes/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const EpisodesYoutubeIdRoute = EpisodesYoutubeIdImport.update({
+  id: '/episodes/$youtubeId',
   path: '/episodes/$youtubeId',
   getParentRoute: () => rootRoute,
 } as any)
