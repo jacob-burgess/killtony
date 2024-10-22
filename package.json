@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "sst dev",
     "deploy": "sst deploy",
+    "dev": "sst dev",
     "load": "sst shell bun run load.ts",
     "sso": "aws sso login --sso-session=boogie",
     "typecheck": "bun --filter=* typecheck"
@@ -14,9 +14,10 @@
     "packages/*"
   ],
   "dependencies": {
-    "sst": "^3.2.46"
+    "sst": "3.2.46"
   },
   "devDependencies": {
+    "@types/aws-lambda": "8.10.145",
     "@types/bun": "latest"
   },
   "peerDependencies": {
